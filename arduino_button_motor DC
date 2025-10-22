@@ -1,0 +1,135 @@
+const int motorPin = 9;
+const int buttPin = 7;
+
+int val = 0; 
+
+void setup()
+{
+  
+  
+  pinMode(buttPin, INPUT);
+  pinMode(motorPin, OUTPUT);
+  
+  //delay(10000);
+    
+}
+
+void loop(){
+  
+     val = digitalRead(buttPin);
+  
+  int Speed1 = 100;
+  int Speed2 = 0;
+  int time[7] = {5000, 10000, 15000, 20000, 25000, 30000, 35000};
+  int Time2 = 3000;
+  
+  
+
+  // 16 FEET
+  if(val == HIGH){
+  
+   int Speed1;
+   int time[0];
+   
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[0]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  
+}
+  // 17 FEET
+   if(val == (HIGH * 2)){
+  int Speed1;
+  int time[1];
+  
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[1]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  }
+  // 18 FEET
+  
+  if(val == (HIGH * 3)){
+  
+   int Speed1;
+   int time[2];
+   
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[2]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  }
+
+// 19 FEET
+
+  if(val == (HIGH * 4)){
+  
+   int Speed1;
+   int time[3]; 
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[3]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  }
+  //
+    if(val == (HIGH * 5)){
+  
+   int Speed1;
+   int time[4];
+     
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[4]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  }
+  // 21 FEET
+    if(val == (HIGH * 6)){
+  
+   int Speed1;
+   int time[5];
+     
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[5]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  }
+  // 22 FEET
+    if(val == (HIGH * 7)){
+  
+   int Speed1;
+   int time[6];
+   
+  int Speed2;
+  int Time2;
+  
+  analogWrite(motorPin, Speed1);
+  delay (time[6]);
+  
+  analogWrite(motorPin, Speed2);
+  delay(Time2);
+  }
+}
