@@ -1,135 +1,45 @@
-const int motorPin = 9;
-const int buttPin = 7;
+const int motorPin1  = 5;  // Pin 14 of L293
+const int motorPin2  = 6;  // Pin 10 of L293
 
-int val = 0; 
 
-void setup()
-{
+//This will run only one time.
+void setup(){
+ 
+    //Set pins as outputs
+    pinMode(motorPin1, OUTPUT);
+    pinMode(motorPin2, OUTPUT);
+    
+    
+    //Motor Control - Motor A: motorPin1,motorpin2 & Motor B: motorpin3,motorpin4
+
+    //This code  will turn Motor A clockwise for 2 sec.
+    digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
   
-  
-  pinMode(buttPin, INPUT);
-  pinMode(motorPin, OUTPUT);
-  
-  //delay(10000);
     
 }
 
 void loop(){
-  
-     val = digitalRead(buttPin);
-  
-  int Speed1 = 100;
-  int Speed2 = 0;
-  int time[7] = {5000, 10000, 15000, 20000, 25000, 30000, 35000};
-  int Time2 = 3000;
-  
-  
-
-  // 16 FEET
-  if(val == HIGH){
-  
-   int Speed1;
-   int time[0];
+    delay(2000); 
+    //This code will turn Motor A counter-clockwise for 2 sec.
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, HIGH);
    
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[0]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  
-}
-  // 17 FEET
-   if(val == (HIGH * 2)){
-  int Speed1;
-  int time[1];
-  
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[1]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  }
-  // 18 FEET
-  
-  if(val == (HIGH * 3)){
-  
-   int Speed1;
-   int time[2];
+    delay(2000);
+    
+    //This code will turn Motor B clockwise for 2 sec.
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
    
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[2]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  }
+    delay(2000); 
+    //This code will turn Motor B counter-clockwise for 2 sec.
+    digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+    
+    delay(2000);    
+    
+    //And this code will stop motors
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
 
-// 19 FEET
-
-  if(val == (HIGH * 4)){
-  
-   int Speed1;
-   int time[3]; 
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[3]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  }
-  //
-    if(val == (HIGH * 5)){
-  
-   int Speed1;
-   int time[4];
-     
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[4]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  }
-  // 21 FEET
-    if(val == (HIGH * 6)){
-  
-   int Speed1;
-   int time[5];
-     
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[5]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  }
-  // 22 FEET
-    if(val == (HIGH * 7)){
-  
-   int Speed1;
-   int time[6];
-   
-  int Speed2;
-  int Time2;
-  
-  analogWrite(motorPin, Speed1);
-  delay (time[6]);
-  
-  analogWrite(motorPin, Speed2);
-  delay(Time2);
-  }
 }
