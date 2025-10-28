@@ -9,14 +9,7 @@ void setup(){
     pinMode(motorPin1, OUTPUT);
     pinMode(motorPin2, OUTPUT);
     
-    
-    //Motor Control - Motor A: motorPin1,motorpin2 & Motor B: motorpin3,motorpin4
-
-    //This code  will turn Motor A clockwise for 2 sec.
-    digitalWrite(motorPin1, HIGH);
-    digitalWrite(motorPin2, LOW);
-  
-    
+         
 }
 
 void loop(){
