@@ -14,18 +14,18 @@ void setup(){
 
 void loop(){
     delay(2000); 
-    //This code will turn Motor A counter-clockwise for 2 sec.
+    //This code will turn Motor  counter-clockwise for 2 sec.
     digitalWrite(motorPin1, LOW);
     digitalWrite(motorPin2, HIGH);
    
     delay(2000);
     
-    //This code will turn Motor B clockwise for 2 sec.
+    //This code will turn Motor  clockwise for 2 sec.
     digitalWrite(motorPin1, LOW);
     digitalWrite(motorPin2, LOW);
    
     delay(2000); 
-    //This code will turn Motor B counter-clockwise for 2 sec.
+    //This code will turn Motor  counter-clockwise for 2 sec.
     digitalWrite(motorPin1, HIGH);
     digitalWrite(motorPin2, LOW);
     
